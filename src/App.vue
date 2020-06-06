@@ -7,20 +7,28 @@
       </a>
       </p>
     <MyProfile></MyProfile>
+    <button @click="setComp = 'Hobby'">Hobby</button>
+    <button @click="setComp = 'About'">About</button>
+    <component :is="setComp"></component>
   </div>
 </template>
 
 <script>
 import MyProfile from './components/MyProfile.vue';
+import About from './components/About.vue';
+import Hobby from './components/Hobby.vue';
 export default {
   data() {
     return {
       heading: 'Hello Vue',
-      vuelink: 'https://jp.vuejs.org/'
+      vuelink: 'https://jp.vuejs.org/',
+      setComp: 'About'
     }
   },
   components: {
-    MyProfile
+    MyProfile,
+    About,
+    Hobby
   }
 }
 </script>
