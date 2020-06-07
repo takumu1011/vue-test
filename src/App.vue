@@ -9,7 +9,9 @@
     <MyProfile></MyProfile>
     <button @click="setComp = 'Hobby'">Hobby</button>
     <button @click="setComp = 'About'">About</button>
-    <component :is="setComp"></component>
+    <transition name="fade">
+      <component :is="setComp"></component>
+    </transition>
   </div>
 </template>
 
@@ -38,5 +40,21 @@ export default {
     width: 450px;
     margin: 0 auto;
     text-align: center;
+  }
+  .fade-enter {
+    opacity: 0;
+  }
+  .fade-enter-active,
+  .fade-leave-active{
+    transition: opacity 0.55s ease-in 0s;
+  }
+  .fade-enter-to {
+    opacity: 1;
+  }
+  .fade-leave {
+    opacity: 1;
+  }
+  .fade-leave-to {
+    opacity: 0;
   }
 </style>
