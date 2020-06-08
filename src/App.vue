@@ -1,5 +1,6 @@
 <template>
   <div class="vue">
+    <Header></Header>
     <h1 class="vue__heading">{{ heading }}</h1>
     <p class="vue__img-wrap">
       <a class="vue__link" :href="vuelink">
@@ -19,6 +20,7 @@
 import MyProfile from './components/MyProfile.vue';
 import About from './components/About.vue';
 import Hobby from './components/Hobby.vue';
+import Header from './components/Header.vue';
 export default {
   data() {
     return {
@@ -30,17 +32,14 @@ export default {
   components: {
     MyProfile,
     About,
-    Hobby
+    Hobby,
+    Header
   }
 }
 </script>
 
 <style scoped>
-  .vue {
-    width: 450px;
-    margin: 0 auto;
-    text-align: center;
-  }
+
   .fade-enter {
     opacity: 0;
   }
