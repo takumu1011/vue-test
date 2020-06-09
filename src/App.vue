@@ -8,31 +8,22 @@
       </a>
       </p>
     <MyProfile></MyProfile>
-    <button @click="setComp = 'Hobby'">Hobby</button>
-    <button @click="setComp = 'About'">About</button>
-    <transition name="fade">
-      <component :is="setComp"></component>
-    </transition>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import MyProfile from './components/MyProfile.vue';
-import About from './components/About.vue';
-import Hobby from './components/Hobby.vue';
 import Header from './components/Header.vue';
 export default {
   data() {
     return {
       heading: 'Hello Vue',
       vuelink: 'https://jp.vuejs.org/',
-      setComp: 'About'
     }
   },
   components: {
     MyProfile,
-    About,
-    Hobby,
     Header
   }
 }
