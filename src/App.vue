@@ -6,9 +6,11 @@
       <a class="vue__link" :href="vuelink">
         <img  class="vue__img" src="./assets/logo.png" alt="Vue.jsロゴ">
       </a>
-      </p>
+    </p>
     <MyProfile></MyProfile>
-    <router-view></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
 
@@ -36,7 +38,7 @@ export default {
   }
   .fade-enter-active,
   .fade-leave-active{
-    transition: opacity 0.55s ease-in 0s;
+    transition: opacity 0.2s ease-in 0s;
   }
   .fade-enter-to {
     opacity: 1;

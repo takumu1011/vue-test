@@ -1,9 +1,9 @@
 <template>
   <div class="card">
-    <img class="card__img" src="../assets/logo.png">
+    <img class="card__img" :src="img">
     <div class="card__txt">
-      <h3 class="card__ttl">作品名</h3>
-      <p class="card__date">2020年10月11日</p>
+      <h3 class="card__ttl">{{ title }}</h3>
+      <p class="card__date">{{ date }}</p>
     </div>
   </div>
 </template>
@@ -11,14 +11,15 @@
 
 <script>
 export default {
+  props: ['title', 'img', 'date'],
   data() {
     return {
-      cardNum: 10
+      // cardNum: 10,
     }
   },
-  mounted() {
-    this.$emit('card-num', this.cardNum);
-  }
+  // mounted() {
+  //   this.$emit('card-num', this.cardNum);
+  // }
 }
 </script>
 
