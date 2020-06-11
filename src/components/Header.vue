@@ -52,7 +52,7 @@ export default {
   align-items: center;
 }
 .logo {
-  margin: 0 100px;
+  margin-left: 40px;
   text-align: center;
   font-size: 32px;
   cursor: pointer;
@@ -60,6 +60,10 @@ export default {
 .logo__link {
   color: #222;
   text-decoration: none;
+  transition: color 0.4s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+.logo:hover .logo__link {
+  color: #fff;
 }
 .nav {
   padding: 0 30px;

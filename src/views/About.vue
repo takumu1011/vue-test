@@ -79,6 +79,7 @@ export default {
   width: 150px;
   font-weight: bold;
   background-color: #ddd;
+  box-shadow: 0 0 4px #000;
 }
 .about-table__th::before {
   content: '';
@@ -120,6 +121,11 @@ export default {
 @media screen and (max-width: 650px) {
   .about-table__th {
     width: auto;
+    text-align: left;
+    box-shadow: none;
+  }
+  .about-table__th-txt {
+    margin-left: 20px;
   }
   .about-table__th, .about-table__td {
     display: block;
