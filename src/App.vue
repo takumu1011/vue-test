@@ -26,6 +26,7 @@ export default {
 
 <style scoped>
   .vue {
+    font-family: 'Libre Baskerville', serif;
     background: url(./assets/logo.png) no-repeat center center;
     background-size: 400px 400px;
     background-attachment: fixed;

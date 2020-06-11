@@ -1,9 +1,11 @@
 <template>
   <header class="l-h">
     <div class="l-h__in">
-      <h1 class="logo">
-      <router-link class="logo__link" to="/">ロゴ</router-link>
-      </h1>
+      <div class="logo">
+      <router-link class="logo__link" to="/">
+        <i class="fas fa-home"></i>
+      </router-link>
+      </div>
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav__item">
@@ -50,12 +52,14 @@ export default {
   align-items: center;
 }
 .logo {
-  width: 180px;
+  margin: 0 100px;
   text-align: center;
+  font-size: 32px;
   cursor: pointer;
 }
 .logo__link {
-
+  color: #222;
+  text-decoration: none;
 }
 .nav {
   padding: 0 30px;
