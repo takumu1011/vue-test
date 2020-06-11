@@ -32,8 +32,20 @@
         </tr>
         <tr class="about-table__tr">
           <th class="about-table__th">
+            <span class="about-table__th-txt">出身地</span>
+          </th><td class="about-table__td">愛媛県</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
             <span class="about-table__th-txt">好きなスポーツ</span>
           </th><td class="about-table__td">サッカー</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
+            <span class="about-table__th-txt">メールアドレス</span>
+          </th><td class="about-table__td">
+            <a href="mailto:sumikawa.web@gmail.com" target="_blank" rel="noopener">sumikawa.web@gmail.com</a>
+            </td>
         </tr>
       </tbody>
     </table>
@@ -90,10 +102,11 @@ export default {
 }
 .about-table__th-txt {
   position: relative;
-  padding: 0 10px;
+  padding: 5px 10px;
   color: #222;
   background-color: #fff;
   border-radius: 4px;
+  z-index: 1;
 }
 .about-table__td {
   position: relative;
@@ -103,5 +116,16 @@ export default {
   text-align: center;
   border: 1px solid #000;
   border-collapse: collapse;
+}
+@media screen and (max-width: 650px) {
+  .about-table__th {
+    width: auto;
+  }
+  .about-table__th, .about-table__td {
+    display: block;
+  }
+  .about-table__th::before, .about-table__th::after {
+    content: none;
+  }
 }
 </style>
