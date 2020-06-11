@@ -1,13 +1,7 @@
 <template>
   <div class="vue">
     <Header></Header>
-    <h1 class="vue__heading">{{ heading }}</h1>
-    <p class="vue__img-wrap">
-      <a class="vue__link" :href="vuelink">
-        <img  class="vue__img" src="./assets/logo.png" alt="Vue.jsロゴ">
-      </a>
-    </p>
-    <MyProfile></MyProfile>
+      <MyProfile></MyProfile>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
@@ -21,7 +15,6 @@ export default {
   data() {
     return {
       heading: 'Hello Vue',
-      vuelink: 'https://jp.vuejs.org/',
     }
   },
   components: {
@@ -32,7 +25,11 @@ export default {
 </script>
 
 <style scoped>
-
+  .vue {
+    background: url(./assets/logo.png) no-repeat center center;
+    background-size: 400px 400px;
+    background-attachment: fixed;
+  }
   .fade-enter {
     opacity: 0;
   }

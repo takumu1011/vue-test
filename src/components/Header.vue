@@ -38,6 +38,8 @@ export default {
 
 <style scoped>
 .l-h {
+  position: fixed;
+  z-index: 10;
   width: 100%;
   background-color: #ddd;
 }
