@@ -32,8 +32,23 @@
         </tr>
         <tr class="about-table__tr">
           <th class="about-table__th">
+            <span class="about-table__th-txt">干支</span>
+          </th><td class="about-table__td">丑</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
+            <span class="about-table__th-txt">星座</span>
+          </th><td class="about-table__td">てんびん座</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
             <span class="about-table__th-txt">出身地</span>
           </th><td class="about-table__td">愛媛県</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
+            <span class="about-table__th-txt">趣味</span>
+          </th><td class="about-table__td">書店に行くこと</td>
         </tr>
         <tr class="about-table__tr">
           <th class="about-table__th">
