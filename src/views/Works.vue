@@ -51,6 +51,7 @@ export default {
 
 }
 .works__ttl {
+  margin: 20px;
   font-size: 32px;
 }
 .works-list {
