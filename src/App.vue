@@ -15,11 +15,14 @@ export default {
   data() {
     return {
       heading: 'Hello Vue',
+      thiscomp: ''
     }
   },
   components: {
     MyProfile,
     Header
+  },
+  methods: {
   }
 }
 </script>
@@ -28,19 +31,6 @@ export default {
   .vue {
     font-family: 'Libre Baskerville', serif;
   }
-  .vue::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background: url(./assets/logo.png) no-repeat center center;
-    background-size: 300px 300px;
-    background-attachment: fixed;
-  }
-
   .fade-enter {
     opacity: 0;
   }

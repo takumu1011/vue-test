@@ -19,8 +19,8 @@
             </router-link>
           </li>
           <li class="nav__item">
-            <router-link class="nav__link" to="/about">
-              <span class="nav__txt">About</span>
+            <router-link class="nav__link" to="/career">
+              <span class="nav__txt">Career</span>
             </router-link>
           </li>
         </ul>
