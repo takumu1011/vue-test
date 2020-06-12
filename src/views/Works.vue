@@ -59,4 +59,7 @@ export default {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+.works-list__item {
+  margin: 50px 20px;
+}
 </style>

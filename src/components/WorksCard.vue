@@ -27,7 +27,6 @@ export default {
 <style scoped>
 .card {
   width: 300px;
-  margin: 10px  20px;
   background-color: #ddd;
   border: 2px solid #222;
   border-radius: 7px;
