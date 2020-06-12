@@ -27,7 +27,15 @@ export default {
 <style scoped>
   .vue {
     font-family: 'Libre Baskerville', serif;
+  }
+  .vue::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
     background: url(./assets/logo.png) no-repeat center center;
+    background-size: 300px 300px;
     background-attachment: fixed;
   }
 
