@@ -1,7 +1,7 @@
 <template>
   <div class="vue">
     <Header></Header>
-      <MyProfile></MyProfile>
+    <MyProfile></MyProfile>
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
@@ -36,7 +36,7 @@ export default {
   }
   .fade-enter-active,
   .fade-leave-active{
-    transition: opacity 0.2s ease-in 0s;
+    transition: opacity 0.65s cubic-bezier(0.11, 0, 0.5, 0) 0s;
   }
   .fade-enter-to {
     opacity: 1;

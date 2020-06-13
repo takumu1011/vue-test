@@ -51,7 +51,7 @@ export default {
   width: 0;
 }
 .profile-des__txt {
-  margin: 30px 0;
+  margin: 30px 0 0;
   line-height: 1.8;
 }
 @media screen and (max-width: 650px) {

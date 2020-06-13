@@ -82,7 +82,7 @@ export default {
 }
 .about-table {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 50px;
 }
 .about-table__tbody {
 

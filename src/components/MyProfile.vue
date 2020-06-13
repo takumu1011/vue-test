@@ -5,11 +5,13 @@
         <h1 class="ttl">
           <span class="ttl__char" :class="['ttl__char-delay' + index]" v-for="(char, index) in chars" :key="index">{{ char}}</span>
         </h1>
-        <p class="profile__img-wrap">
-          <img class="profile__img" src="../assets/icon.png" alt="プロフィール画像">
+        <p class="profile__img-wrap" @click="changeImage">
+          <img class="profile__img" src="../assets/profile.jpeg" alt="プロフィール画像">
         </p>
       </div>
+      <transition>
         <MyProfileTxt></MyProfileTxt>
+      </transition>
     </div>
   </div>
 </template>
@@ -21,6 +23,21 @@ export default {
     return {
       greeting: 'こんにちは、角川拓夢です。',
       chars: 'My Portfolio',
+      imgFlag : 0
+    }
+  },
+  methods: {
+    changeImage(e) {
+      if(this.imgFlag === 0){
+        this.imgFlag = 1;
+        e.currentTarget.style.transform = "rotateY(360deg)";
+        e.currentTarget.childNodes[0].src = require('../assets/logo.png');
+      }
+      else if(this.imgFlag === 1) {
+        this.imgFlag = 0;
+        e.currentTarget.style.transform = "rotateY(0deg)";
+        e.currentTarget.childNodes[0].src = require('../assets/profile.jpeg');
+      }
     }
   },
   components: {
@@ -41,7 +58,8 @@ export default {
   }
 }
 .profile {
-  padding: 100px 0;
+  height: 100vh;
+  padding: 150px 0 0;
   background-color: #222;
 }
 .profile__in {
@@ -103,12 +121,20 @@ export default {
 /*  */
 .profile__img-wrap {
   width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 1.2s ease-out 0s;
+  cursor: pointer;
 }
 .profile__img {
   display: block;
   width: 100%;
 }
 @media screen and (max-width: 650px) {
+  .profile {
+    padding: 80px 0 0;
+  }
   .profile__in {
     width: 300px;
   }
