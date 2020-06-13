@@ -30,12 +30,12 @@ export default {
     changeImage(e) {
       if(this.imgFlag === 0){
         this.imgFlag = 1;
-        e.currentTarget.style.transform = "rotate3d(0, 1, 0, 360deg)";
+        e.currentTarget.style.transform = "rotateY(360deg)";
         e.currentTarget.childNodes[0].src = require('../assets/logo.png');
       }
       else if(this.imgFlag === 1) {
         this.imgFlag = 0;
-        e.currentTarget.style.transform = "rotate3d(0, 1, 0, 0deg)";
+        e.currentTarget.style.transform = "rotateY(0deg)";
         e.currentTarget.childNodes[0].src = require('../assets/profile.jpeg');
       }
     }
@@ -120,6 +120,8 @@ export default {
 }
 /*  */
 .profile__img-wrap {
+  position: relative;
+  z-index: 1;
   width: 200px;
   height: 200px;
   border-radius: 50%;
