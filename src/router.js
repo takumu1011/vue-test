@@ -5,6 +5,7 @@ import About from './views/About.vue';
 import Works from './views/Works.vue';
 import Career from './views/Career.vue';
 
+
 Vue.use(Router);
 
 export default new Router({
@@ -24,6 +25,10 @@ export default new Router({
     {
       path: '/career',
       component: Career
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })
