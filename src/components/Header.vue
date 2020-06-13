@@ -111,5 +111,9 @@ export default {
 .nav__link:hover .nav__txt::before {
   width: 100%;
 }
-
+@media screen and (max-width: 650px) {
+  .logo:hover .logo__link {
+    color: #222;
+  }
+}
 </style>
