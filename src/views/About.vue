@@ -75,14 +75,27 @@ export default {
 
 <style scoped>
 .about{
+  position: relative;
+}
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(15deg,#fff 50%, #222 50%);
+  z-index: -1;
 }
 .about__ttl {
-  margin: 20px;
+  padding: 20px;
   font-size: 32px;
+  color: #fff;
 }
 .about-table {
   width: 80%;
   margin: 0 auto 50px;
+  background-color: #fff;
 }
 .about-table__tbody {
 
@@ -126,11 +139,11 @@ export default {
 }
 .about-table__td {
   position: relative;
+  text-align: center;
 }
 .about-table__th, .about-table__td {
   padding: 20px 10px;
-  text-align: center;
-  border: 1px solid #000;
+  border: 5px solid #dcdcdc;
   border-collapse: collapse;
 }
 @media screen and (max-width: 650px) {
@@ -138,12 +151,28 @@ export default {
     width: auto;
     text-align: left;
     box-shadow: none;
+    background-color: #000;
+  }
+  .about-table__td {
   }
   .about-table__th-txt {
+    position: relative;
     margin-left: 20px;
+    background-color: transparent;
+    color: #fff;
+  }
+  .about-table__th-txt::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 30px;
+    border-bottom: 1px solid #fff;
   }
   .about-table__th, .about-table__td {
     display: block;
+    border: 1px solid #000;
   }
   .about-table__th::before, .about-table__th::after {
     content: none;

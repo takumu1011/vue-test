@@ -5,12 +5,14 @@
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import MyProfile from './components/MyProfile.vue';
 import Header from './components/Header.vue';
+import MyProfile from './components/MyProfile.vue';
+import Footer from './components/Footer.vue';
 export default {
   data() {
     return {
@@ -19,8 +21,9 @@ export default {
     }
   },
   components: {
+    Header,
     MyProfile,
-    Header
+    Footer
   },
   methods: {
   }
