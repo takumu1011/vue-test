@@ -24,6 +24,7 @@ export default {
       greeting: 'こんにちは、角川拓夢です。',
       chars: 'My Portfolio',
       imgFlag : 0,
+      colorList: ['#f0e68c', '#b0e0e6','#008080','#ffc0cb','#32cd32', '#9370db','#8b0000']
     }
   },
   watch: {
@@ -32,6 +33,9 @@ export default {
         this.changeBg(to.path);
       }
     }
+  },
+  mounted() {
+    this.changeBg();
   },
   methods: {
     changeImage(e) {
@@ -50,12 +54,8 @@ export default {
       const root = this.$el;
       if(path === '/about') {
         root.style.backgroundColor = '#222';
-      }else if(path === '/works') {
-        root.style.backgroundColor = '#ffe4e1';
-      }else if(path === '/career') {
-        root.style.backgroundColor = '#f0e68c';
       }else {
-        root.style.backgroundColor = '#b0e0e6'
+        root.style.backgroundColor =  this.colorList[Math.floor(Math.random() * 7)]
       }
     }
   },
@@ -79,7 +79,6 @@ export default {
 .profile {
   height: 100vh;
   padding: 150px 0 0;
-  background-color: #222;
 }
 .profile__in {
   width: 600px;
