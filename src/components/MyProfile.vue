@@ -23,7 +23,14 @@ export default {
     return {
       greeting: 'こんにちは、角川拓夢です。',
       chars: 'My Portfolio',
-      imgFlag : 0
+      imgFlag : 0,
+    }
+  },
+  watch: {
+    $route(to, from) {
+      if(to.path !== from.path) {
+        this.changeBg(to.path);
+      }
     }
   },
   methods: {
@@ -37,6 +44,18 @@ export default {
         this.imgFlag = 0;
         e.currentTarget.style.transform = "rotateZ(0deg)";
         e.currentTarget.childNodes[0].src = require('../assets/profile.jpeg');
+      }
+    },
+    changeBg(path) {
+      const root = this.$el;
+      if(path === '/about') {
+        root.style.backgroundColor = '#222';
+      }else if(path === '/works') {
+        root.style.backgroundColor = '#ffe4e1';
+      }else if(path === '/career') {
+        root.style.backgroundColor = '#f0e68c';
+      }else {
+        root.style.backgroundColor = '#b0e0e6'
       }
     }
   },
