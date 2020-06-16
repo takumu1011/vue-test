@@ -42,6 +42,7 @@ export default {
 .l-h {
   position: fixed;
   z-index: 10;
+  transform: translate3d(0, 0, 10px);
   width: 100%;
   background-color: #ddd;
 }

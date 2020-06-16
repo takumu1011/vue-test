@@ -153,7 +153,7 @@ export default {
 .profile__img-wrap {
   width: 200px;
   height: 200px;
-  /* border-radius: 50%; */
+  border-radius: 30px;
   overflow: hidden;
   transition: transform 1.2s ease-out 0s;
   cursor: pointer;
@@ -161,6 +161,8 @@ export default {
 .profile__img {
   display: block;
   width: 100%;
+  background-color: #fff;
+
 }
 @media screen and (max-width: 650px) {
   .profile {
