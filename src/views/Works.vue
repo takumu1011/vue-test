@@ -39,7 +39,28 @@ export default {
       ]
     }
   },
+  mounted() {
+    const card = document.getElementsByClassName('works-list__item');
+    const options = {
+        root: null,
+        rootMargin: '-20px 0px'
+    };
+    card.forEach(target => this.onIntersect(target, options));
+  },
   methods: {
+    onIntersect(target, options ={}) {
+      const io = new IntersectionObserver(this.addClass, options);
+      io.observe(target);
+    },
+    addClass(entries) {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('fadeup');
+        }else {
+          entry.target.classList.remove('fadeup');
+        }
+      })
+    }
   },
   components: {
     WorksCard
@@ -62,5 +83,12 @@ export default {
 }
 .works-list__item {
   margin: 50px 20px;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+}
+.works-list__item.fadeup {
+  transform: translateY(0);
+  opacity: 1;
 }
 </style>

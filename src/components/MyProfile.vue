@@ -24,7 +24,8 @@ export default {
       greeting: 'こんにちは、角川拓夢です。',
       chars: 'My Portfolio',
       imgFlag : 0,
-      colorList: ['#f0e68c', '#b0e0e6','#008080','#ffc0cb','#32cd32', '#9370db','#8b0000']
+      colorList: ['#f0e68c', '#b0e0e6','#008080','#ffc0cb','#32cd32', '#9370db','#8b0000'],
+      colorNum: 0
     }
   },
   watch: {
@@ -51,11 +52,22 @@ export default {
       }
     },
     changeBg(path) {
-      const root = this.$el;
-      if(path === '/about') {
-        root.style.backgroundColor = '#222';
+        const root = this.$el;
+        if(path === '/about') {
+          root.style.backgroundColor = '#222';
+        }
+        else {
+          this.selectNum(path);
+          root.style.backgroundColor =  this.colorList[this.colorNum];
+        }
+    },
+    selectNum() {
+      let nowNum = this.colorNum;
+      let selectNum = Math.floor(Math.random() * 7);
+      if(nowNum === selectNum) {
+        this.selectNum();
       }else {
-        root.style.backgroundColor =  this.colorList[Math.floor(Math.random() * 7)]
+        this.colorNum = selectNum;
       }
     }
   },
@@ -79,6 +91,7 @@ export default {
 .profile {
   height: 100vh;
   padding: 150px 0 0;
+  transition: background-color 0.8s ease-out 0s;
 }
 .profile__in {
   width: 600px;
