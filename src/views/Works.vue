@@ -83,7 +83,7 @@ export default {
 }
 .works-list__item {
   margin: 50px 20px;
-  transform: translateY(80px);
+  transform: translateY(50px);
   opacity: 0;
   transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s;
 }

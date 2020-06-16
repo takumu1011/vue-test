@@ -6,7 +6,7 @@
           <span class="ttl__char" :class="['ttl__char-delay' + index]" v-for="(char, index) in chars" :key="index">{{ char}}</span>
         </h1>
         <p class="profile__img-wrap" @click="changeImage">
-          <img class="profile__img" src="../assets/profile.jpeg" alt="プロフィール画像">
+          <img class="profile__img" src="../assets/cat02.png" alt="プロフィール画像">
         </p>
       </div>
       <transition>
@@ -42,13 +42,13 @@ export default {
     changeImage(e) {
       if(this.imgFlag === 0){
         this.imgFlag = 1;
-        e.currentTarget.style.transform = "rotateZ(360deg)";
-        e.currentTarget.childNodes[0].src = require('../assets/logo.png');
+        e.currentTarget.style.transform = "rotateY(360deg)";
+        e.currentTarget.childNodes[0].src = require('../assets/cat04.png');
       }
       else if(this.imgFlag === 1) {
         this.imgFlag = 0;
-        e.currentTarget.style.transform = "rotateZ(0deg)";
-        e.currentTarget.childNodes[0].src = require('../assets/profile.jpeg');
+        e.currentTarget.style.transform = "rotateY(0deg)";
+        e.currentTarget.childNodes[0].src = require('../assets/cat02.png');
       }
     },
     changeBg(path) {
@@ -153,7 +153,7 @@ export default {
 .profile__img-wrap {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   overflow: hidden;
   transition: transform 1.2s ease-out 0s;
   cursor: pointer;
