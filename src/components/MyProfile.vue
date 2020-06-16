@@ -162,7 +162,6 @@ export default {
   display: block;
   width: 100%;
   background-color: #fff;
-
 }
 @media screen and (max-width: 650px) {
   .profile {
