@@ -43,7 +43,7 @@ export default {
     const card = document.getElementsByClassName('works-list__item');
     const options = {
         root: null,
-        rootMargin: '-20px 0px'
+        rootMargin: '-20px 0px 0px'
     };
     card.forEach(target => this.onIntersect(target, options));
   },
