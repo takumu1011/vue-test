@@ -98,11 +98,11 @@ export default {
   margin: 0 auto;
 }
 .profile__main {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  overflow: hidden;
 }
 .ttl {
   font-size: 50px;
