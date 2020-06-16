@@ -102,6 +102,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  overflow: hidden;
 }
 .ttl {
   font-size: 50px;
