@@ -1,10 +1,15 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import About from './views/About.vue';
-import Works from './views/Works.vue';
-import Career from './views/Career.vue';
 
+// import Home from './views/Home.vue';
+// import About from './views/About.vue';
+// import Works from './views/Works.vue';
+// import Career from './views/Career.vue';
+
+const Home = () => import(/* webpackChunkName: "Home" */ './views/Home.vue');
+const About = () => import(/* webpackChunkName: "About" */ './views/About.vue');
+const Works = () => import(/* webpackChunkName: "Works" */ './views/Works.vue');
+const Career = () => import(/* webpackChunkName: "Career" */ './views/Career.vue');
 
 Vue.use(Router);
 
