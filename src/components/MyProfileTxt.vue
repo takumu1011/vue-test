@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .profile-des {
   position: relative;
   margin: 20px auto;
@@ -39,20 +39,20 @@ export default {
   background-color: #fff;
   border-radius: 7px;
   box-shadow: 15px 20px 10px #000;
-}
-.profile-des::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  right: 80px;
-  border-bottom: 30px solid #fff;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  width: 0;
-}
-.profile-des__txt {
-  margin: 30px 0 0;
-  line-height: 1.8;
+  &::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: 80px;
+    border-bottom: 30px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    width: 0;
+  }
+  &__txt {
+    margin: 30px 0 0;
+    line-height: 1.8;
+  }
 }
 @media screen and (max-width: 650px) {
   .profile-des::before {

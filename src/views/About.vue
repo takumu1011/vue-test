@@ -73,87 +73,81 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .about{
   position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background: linear-gradient(15deg,#fff 50%, #222 50%);
+    z-index: -1;
+  }
+  &__ttl {
+    padding: 20px;
+    font-size: 32px;
+    color: #fff;
+  }
+  &-table {
+    width: 80%;
+    margin: 0 auto 50px;
+    background-color: #fff;
+    &__th {
+      position: relative;
+      width: 150px;
+      font-weight: bold;
+      background-color: #ddd;
+      box-shadow: 0 0 4px #000;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 1px solid #222;
+        width: 105%;
+        transform: rotate(-18deg);
+        transform-origin: left;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-bottom: 1px solid #222;
+        width: 105%;
+        transform: rotate(18deg);
+        transform-origin: right;
+      }
+      &-txt {
+        position: relative;
+        padding: 5px 10px;
+        color: #222;
+        background-color: #fff;
+        border-radius: 4px;
+        z-index: 1;
+      }
+    }
+    &__td {
+      position: relative;
+      text-align: center;
+    }
+    &__th, &__td {
+      padding: 20px 10px;
+      border: 5px solid #dcdcdc;
+      border-collapse: collapse;
+    }
+  }
 }
-.about::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(15deg,#fff 50%, #222 50%);
-  z-index: -1;
-}
-.about__ttl {
-  padding: 20px;
-  font-size: 32px;
-  color: #fff;
-}
-.about-table {
-  width: 80%;
-  margin: 0 auto 50px;
-  background-color: #fff;
-}
-.about-table__tbody {
 
-}
-.about-table__tr {
-}
-.about-table__th {
-  position: relative;
-  width: 150px;
-  font-weight: bold;
-  background-color: #ddd;
-  box-shadow: 0 0 4px #000;
-}
-.about-table__th::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #222;
-  width: 105%;
-  transform: rotate(-18deg);
-  transform-origin: left;
-}
-.about-table__th::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-bottom: 1px solid #222;
-  width: 105%;
-  transform: rotate(18deg);
-  transform-origin: right;
-}
-.about-table__th-txt {
-  position: relative;
-  padding: 5px 10px;
-  color: #222;
-  background-color: #fff;
-  border-radius: 4px;
-  z-index: 1;
-}
-.about-table__td {
-  position: relative;
-  text-align: center;
-}
-.about-table__th, .about-table__td {
-  padding: 20px 10px;
-  border: 5px solid #dcdcdc;
-  border-collapse: collapse;
-}
 @media screen and (max-width: 650px) {
   .about-table__th {
     width: auto;
     text-align: left;
     box-shadow: none;
     background-color: #000;
-  }
-  .about-table__td {
   }
   .about-table__th-txt {
     position: relative;

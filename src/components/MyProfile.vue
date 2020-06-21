@@ -53,13 +53,8 @@ export default {
     },
     changeBg(path) {
         const root = this.$el;
-        if(path === '/about') {
-          root.style.backgroundColor = '#222';
-        }
-        else {
-          this.selectNum(path);
-          root.style.backgroundColor =  this.colorList[this.colorNum];
-        }
+        this.selectNum(path);
+        root.style.backgroundColor =  this.colorList[this.colorNum];
     },
     selectNum() {
       let nowNum = this.colorNum;
@@ -77,7 +72,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @keyframes show-ttl{
   0% {
     transform: translate(0, -20px);
@@ -92,77 +87,44 @@ export default {
   height: 100vh;
   padding: 150px 0 0;
   transition: background-color 0.8s ease-out 0s;
-}
-.profile__in {
+  &__in {
   width: 600px;
   margin: 0 auto;
-}
-.profile__main {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
+  }
+  &__main {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__img-wrap {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: transform 1.2s ease-out 0s;
+    cursor: pointer;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+  }
 }
 .ttl {
   font-size: 50px;
   color: #fff;
-}
-.ttl__char {
+  &__char {
   transform: translate(0, -20px);
   opacity: 0;
   animation: show-ttl 2s ease-out forwards;
-}
-/*  */
-.ttl__char-delay0 {
-  animation-delay: 0.3;
-}
-.ttl__char-delay1 {
-  animation-delay: 0.5s;
-}
-.ttl__char-delay2 {
-  animation-delay: 0.7s;
-}
-.ttl__char-delay3 {
-  animation-delay: 0.9s;
-}
-.ttl__char-delay4 {
-  animation-delay: 1.1s;
-}
-.ttl__char-delay5 {
-  animation-delay: 1.3s;
-}
-.ttl__char-delay6 {
-  animation-delay: 1.5s;
-}
-.ttl__char-delay7 {
-  animation-delay: 1.7s;
-}
-.ttl__char-delay8 {
-  animation-delay: 1.9s;
-}
-.ttl__char-delay9 {
-  animation-delay: 2.1s;
-}
-.ttl__char-delay10 {
-  animation-delay: 2.2s;
-}
-.ttl__char-delay11 {
-  animation-delay: 2.4s;
-}
-/*  */
-.profile__img-wrap {
-  width: 200px;
-  height: 200px;
-  border-radius: 30px;
-  overflow: hidden;
-  transition: transform 1.2s ease-out 0s;
-  cursor: pointer;
-}
-.profile__img {
-  display: block;
-  width: 100%;
-  background-color: #fff;
+    @for $i from 0 through 11 {
+        &-delay#{$i} {
+        animation-delay: #{0.3 + 0.2 * $i}s;
+      }
+    }
+  }
 }
 @media screen and (max-width: 650px) {
   .profile {

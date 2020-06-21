@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 @keyframes icon-move {
   0% {
     transform: translateX(0);
@@ -42,47 +42,47 @@ export default {
   border: 5px solid #222;
   border-radius: 4px;
   transition: box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
-}
-.card:hover {
-  box-shadow: 0 0 15px #222;
-}
-.card:hover .card__ttl-in::before {
-  animation: icon-move 0.75s linear 0s infinite;
-}
-.card__link {
-  color: #222;
-  text-decoration: none;
-}
-.card__img {
-  display: block;
-  width: 100%;
-  background-color: orange;
-}
-.card__txt {
-  padding: 0 10px;
-}
-.card__ttl {
-  margin: 10px 0 20px;
-  font-size: 24px;
-}
-.card__ttl-in {
-  position: relative;
-}
-.card__ttl-in::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: -30px;
-  width: 20px;
-  height: 100%;
-  background: url(../assets/arrow_right.png) no-repeat center center;
-  background-size: contain;
-  opacity: 0;
-}
-.card__date {
-  padding-bottom: 15px;
-  font-size: 14px;
-  text-align: right;
+  &:hover {
+    box-shadow: 0 0 15px #222;
+    .card__ttl-in::before {
+      animation: icon-move 0.75s linear 0s infinite;
+    }
+  }
+  &__link {
+    color: #222;
+    text-decoration: none;
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    background-color: orange;
+  }
+  &__txt {
+    padding: 0 10px;
+  }
+  &__ttl {
+    margin: 10px 0 20px;
+    font-size: 24px;
+    &-in {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -30px;
+        width: 20px;
+        height: 100%;
+        background: url(../assets/arrow_right.png) no-repeat center center;
+        background-size: contain;
+        opacity: 0;
+      }
+    }
+  }
+  &__date {
+    padding-bottom: 15px;
+    font-size: 14px;
+    text-align: right;
+  }
 }
 @media screen and (max-width: 650px) {
 .card:hover {

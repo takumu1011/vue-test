@@ -11,7 +11,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 .l-f {
   padding: 25px 0;
   color: #fff;

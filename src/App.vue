@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .vue {
     font-family: 'Libre Baskerville', serif;
   }

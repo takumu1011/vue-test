@@ -68,27 +68,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .works {
-
-}
-.works__ttl {
-  margin: 20px;
-  font-size: 32px;
-}
-.works-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.works-list__item {
-  margin: 50px 20px;
-  transform: translateY(50px);
-  opacity: 0;
-  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s;
-}
-.works-list__item.fadeup {
-  transform: translateY(0);
-  opacity: 1;
+  &__ttl {
+    margin: 20px;
+    font-size: 32px;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__item {
+      margin: 50px 20px;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+      &.fadeup {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
 }
 </style>
