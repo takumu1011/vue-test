@@ -69,13 +69,13 @@
 
 <script>
 export default {
-
 }
 </script>
 
 <style lang="scss" scoped>
 .about{
   position: relative;
+  width: 100%;
   padding: 30px 0;
   background-color: #fff;
   &::before {

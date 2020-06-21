@@ -13,6 +13,8 @@ export default {
 
 <style lang="scss" scoped>
 .l-f {
+  position: relative;
+  z-index: 2;
   padding: 25px 0;
   color: #fff;
   background-color: #000;

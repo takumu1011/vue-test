@@ -1,25 +1,28 @@
 <template>
   <div class="home">
-    <section class="first">
+    <div class="home__in">
+    <section class="home-github">
     </section>
-    <section class="second">
+    <section class="home-scrapbox">
     </section>
-    <section class="third">
-    </section>
+    </div>
   </div>
 </template>
 
 
 <script>
 export default {
+  data() {
+    return {
 
+    }
+  },
 }
 </script>
 
 
 <style lang="scss" scoped>
 .home {
-  height: 100vh;
-  background: linear-gradient(-40deg, #87ceeb 5%, #fff);
+
 }
 </style>

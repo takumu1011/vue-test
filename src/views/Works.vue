@@ -70,6 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 .works {
+  position: relative;
   background-color: #000;
   &__ttl {
     margin: 20px;

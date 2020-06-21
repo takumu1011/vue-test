@@ -2,10 +2,12 @@
   <div class="vue">
     <Header></Header>
     <MyProfile></MyProfile>
-    <transition name="fade" mode="out-in">
-      <router-view></router-view>
-    </transition>
-    <Footer></Footer>
+    <div class="layer">
+      <transition name="fade" mode="out-in">
+        <router-view></router-view>
+      </transition>
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
@@ -33,6 +35,10 @@ export default {
 <style lang="scss" scoped>
   .vue {
     font-family: 'Libre Baskerville', serif;
+  }
+  .layer {
+    width: 100%;
+    padding-top: 650px;
   }
   .fade-enter {
     opacity: 0;

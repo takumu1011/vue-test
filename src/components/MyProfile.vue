@@ -84,10 +84,12 @@ export default {
   }
 }
 .profile {
-  position:sticky;
-  top: 0px;
-  z-index: -1;
-  height: 150vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
   padding: 150px 0 0;
   transition: background-color 0.8s ease-out 0s;
   &__in {
@@ -131,7 +133,7 @@ export default {
 }
 @media screen and (max-width: 650px) {
   .profile {
-    padding: 80px 0 0;
+    padding: 80px 0 120px;
   }
   .profile__in {
     width: 300px;
