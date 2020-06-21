@@ -84,6 +84,9 @@ export default {
   }
 }
 .profile {
+  position:sticky;
+  top: 0px;
+  z-index: -1;
   height: 100vh;
   padding: 150px 0 0;
   transition: background-color 0.8s ease-out 0s;

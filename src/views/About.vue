@@ -76,6 +76,8 @@ export default {
 <style lang="scss" scoped>
 .about{
   position: relative;
+  padding: 30px 0;
+  background-color: #fff;
   &::before {
     content: '';
     position: absolute;
@@ -89,7 +91,7 @@ export default {
   &__ttl {
     padding: 20px;
     font-size: 32px;
-    color: #fff;
+    letter-spacing: 5px;
   }
   &-table {
     width: 80%;

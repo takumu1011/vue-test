@@ -70,6 +70,7 @@ export default {
 
 <style lang="scss" scoped>
 .works {
+  background-color: #000;
   &__ttl {
     margin: 20px;
     font-size: 32px;
