@@ -37,8 +37,9 @@ export default {
     font-family: 'Libre Baskerville', serif;
   }
   .layer {
+    position: relative;
+    top: 650px;
     width: 100%;
-    padding-top: 650px;
   }
   .fade-enter {
     opacity: 0;
@@ -55,5 +56,10 @@ export default {
   }
   .fade-leave-to {
     opacity: 0;
+  }
+  @media screen and (max-width: 650px) {
+    .layer {
+      top: 600px;
+    }
   }
 </style>
