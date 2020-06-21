@@ -59,7 +59,7 @@ export default {
   }
   @media screen and (max-width: 650px) {
     .layer {
-      top: 60vh;
+      top: 75vh;
     }
   }
 </style>
