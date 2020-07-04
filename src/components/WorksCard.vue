@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <a class="card__link" :href="card.url" target="_blank">
-      <img class="card__img" :src="card.img">
+      <img class="card__img" :src="card.img" />
       <div class="card__txt">
         <h3 class="card__ttl">
           <span class="card__ttl-in">{{ card.title }}</span>
@@ -14,12 +14,11 @@
 
 <script>
 export default {
-  props: ['card'],
+  props: ["card"],
   data() {
-    return {
-    }
-  },
-}
+    return {};
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -38,7 +37,7 @@ export default {
 }
 .card {
   width: 300px;
-  background-color: #ddd;
+  background-color: #b0c4de;
   border: 5px solid #222;
   border-radius: 4px;
   transition: box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
@@ -55,18 +54,17 @@ export default {
   &__img {
     display: block;
     width: 100%;
-    background-color: orange;
   }
   &__txt {
     padding: 0 10px;
   }
   &__ttl {
     margin: 10px 0 20px;
-    font-size: 24px;
+    font-size: 18px;
     &-in {
       position: relative;
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         right: -30px;
@@ -85,11 +83,11 @@ export default {
   }
 }
 @media screen and (max-width: 650px) {
-.card:hover {
-  box-shadow: none;
-}
-.card:hover .card__ttl-in::before {
-  animation: none;
-}
+  .card:hover {
+    box-shadow: none;
+  }
+  .card:hover .card__ttl-in::before {
+    animation: none;
+  }
 }
 </style>

@@ -2,21 +2,21 @@
   <div class="profile-des">
     <h2 class="profile-des__heading">{{ greeting }}</h2>
     <p class="profile-des__txt" v-if="this.$route.path === '/'">
-      大学の時にプログラミングに興味を持ち学んできました。<br>
-      フロントエンドエンジニアとしてさらに成長していきたいと思っています。<br>
-      様々なものに触れてより良いものを作れるよう楽しんで作っていきたいと思います。
+      大学の時にプログラミングに興味を持ち学んできました。
+      <br />フロントエンドエンジニアとしてさらに成長していきたいと思っています。
+      <br />様々なものに触れてより良いものを作れるよう楽しんで作っていきたいと思います。
     </p>
     <p class="profile-des__txt" v-else-if="this.$route.path === '/about'">
-      このページでは、私についての情報を載せております。<br>
-      何かありましたら、下記のメールアドレスからご連絡をお願いいたします。
+      このページでは、私についての情報を載せております。
+      <br />ご連絡は下記のメールアドレスからごお願いいたします。
     </p>
     <p class="profile-des__txt" v-else-if="this.$route.path === '/works'">
-      このページではこれまでに作った作品を載せております。<br>
-      ここには載せられないものもありますので、直接お会いした時に話をさせていただければと思います。
+      このページではこれまでに作った作品を載せております。
+      <br />実案件等は載せておりません。
     </p>
     <p class="profile-des__txt" v-else-if="this.$route.path === '/career'">
-      このページではこれまでの経歴や所有資格情報、スキルの情報を載せております。<br>
-      詳細につきましては直接お会いした時にお話しさせていただければと思います。
+      このページでは所有資格情報、スキルの情報を載せております。
+      <br />詳細につきましては直接お会いした時にお話しさせていただければと思います。
     </p>
   </div>
 </template>
@@ -25,10 +25,10 @@
 export default {
   data() {
     return {
-      greeting: 'こんにちは、角川拓夢です。'
-    }
+      greeting: "こんにちは、角川拓夢です。"
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -40,7 +40,7 @@ export default {
   border-radius: 7px;
   box-shadow: 15px 20px 10px #000;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -20px;
     right: 80px;

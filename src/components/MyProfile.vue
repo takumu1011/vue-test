@@ -3,10 +3,15 @@
     <div class="profile__in">
       <div class="profile__main">
         <h1 class="ttl">
-          <span class="ttl__char" :class="['ttl__char-delay' + index]" v-for="(char, index) in chars" :key="index">{{ char}}</span>
+          <span
+            class="ttl__char"
+            :class="['ttl__char-delay' + index]"
+            v-for="(char, index) in chars"
+            :key="index"
+          >{{ char}}</span>
         </h1>
         <p class="profile__img-wrap" @click="changeImage">
-          <img class="profile__img" src="../assets/cat02.png" alt="プロフィール画像">
+          <img class="profile__img" src="../assets/cat02.png" alt="プロフィール画像" />
         </p>
       </div>
       <transition>
@@ -17,20 +22,28 @@
 </template>
 
 <script>
-import MyProfileTxt from './MyProfileTxt.vue';
+import MyProfileTxt from "./MyProfileTxt.vue";
 export default {
   data() {
     return {
-      greeting: 'こんにちは、角川拓夢です。',
-      chars: 'My Portfolio',
-      imgFlag : 0,
-      colorList: ['#f0e68c', '#b0e0e6','#008080','#ffc0cb','#32cd32', '#9370db','#8b0000'],
+      greeting: "こんにちは、角川拓夢です。",
+      chars: "My Portfolio",
+      imgFlag: 0,
+      colorList: [
+        "#f0e68c",
+        "#b0e0e6",
+        "#008080",
+        "#ffc0cb",
+        "#32cd32",
+        "#9370db",
+        "#8b0000"
+      ],
       colorNum: 0
-    }
+    };
   },
   watch: {
     $route(to, from) {
-      if(to.path !== from.path) {
+      if (to.path !== from.path) {
         this.changeBg(to.path);
       }
     }
@@ -40,28 +53,27 @@ export default {
   },
   methods: {
     changeImage(e) {
-      if(this.imgFlag === 0){
+      if (this.imgFlag === 0) {
         this.imgFlag = 1;
         e.currentTarget.style.transform = "rotateY(360deg)";
-        e.currentTarget.childNodes[0].src = require('../assets/cat04.png');
-      }
-      else if(this.imgFlag === 1) {
+        e.currentTarget.childNodes[0].src = require("../assets/cat04.png");
+      } else if (this.imgFlag === 1) {
         this.imgFlag = 0;
         e.currentTarget.style.transform = "rotateY(0deg)";
-        e.currentTarget.childNodes[0].src = require('../assets/cat02.png');
+        e.currentTarget.childNodes[0].src = require("../assets/cat02.png");
       }
     },
     changeBg(path) {
-        const root = this.$el;
-        this.selectNum(path);
-        root.style.backgroundColor =  this.colorList[this.colorNum];
+      const root = this.$el;
+      this.selectNum(path);
+      root.style.backgroundColor = this.colorList[this.colorNum];
     },
     selectNum() {
       let nowNum = this.colorNum;
       let selectNum = Math.floor(Math.random() * 7);
-      if(nowNum === selectNum) {
+      if (nowNum === selectNum) {
         this.selectNum();
-      }else {
+      } else {
         this.colorNum = selectNum;
       }
     }
@@ -69,11 +81,11 @@ export default {
   components: {
     MyProfileTxt
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-@keyframes show-ttl{
+@keyframes show-ttl {
   0% {
     transform: translate(0, -20px);
     opacity: 0;
@@ -84,17 +96,12 @@ export default {
   }
 }
 .profile {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow-y: auto;
-  padding: 150px 0 0;
+  position: relative;
+  padding: 150px 0 60px;
   transition: background-color 0.8s ease-out 0s;
   &__in {
-  width: 600px;
-  margin: 0 auto;
+    width: 600px;
+    margin: 0 auto;
   }
   &__main {
     overflow: hidden;
@@ -121,11 +128,11 @@ export default {
   font-size: 50px;
   color: #fff;
   &__char {
-  transform: translate(0, -20px);
-  opacity: 0;
-  animation: show-ttl 2s ease-out forwards;
+    transform: translate(0, -20px);
+    opacity: 0;
+    animation: show-ttl 2s ease-out forwards;
     @for $i from 0 through 11 {
-        &-delay#{$i} {
+      &-delay#{$i} {
         animation-delay: #{0.3 + 0.2 * $i}s;
       }
     }

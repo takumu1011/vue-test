@@ -10,62 +10,91 @@
 </template>
 
 <script>
-import WorksCard from '../components/WorksCard.vue';
+import WorksCard from "../components/WorksCard.vue";
 export default {
   data() {
     return {
-      cardNum: '0',
+      cardNum: "0",
       cards: [
         {
           id: 1,
-          url: 'https://google.com',
-          title: '作品1',
-          img: require('../assets/logo.png'),
-          date: '2020年2月2日',
+          url: "https://github.com/takumu1011/",
+          title: "Git hub",
+          img: require("../assets/github.png"),
+          date: "2020年2月2日"
         },
         {
           id: 2,
-          title: '作品2',
-          img: require('../assets/logo.png'),
-          date: '2020年10月11日',
+          url: "https://scrapbox.io/sumikawa-web/",
+          title: "ScrapBox",
+          img: require("../assets/scrapbox.png"),
+          date: "2020年2月2日"
         },
         {
           id: 3,
-          url: '',
-          title: '作品3',
-          img: require('../assets/logo.png'),
-          date: '2020年5月5日',
+          url: "http://tkm99.sakura.ne.jp/veg_market/",
+          title: "野菜直売所",
+          img: require("../assets/veg-market.png"),
+          date: "2020年2月2日"
+        },
+        {
+          id: 4,
+          url: "https://tkm99.sakura.ne.jp/covid/",
+          title: "コロナウイルス対策サイト",
+          img: require("../assets/covid.png"),
+          date: "2020年10月11日"
+        },
+        {
+          id: 5,
+          url: "https://tkm99.sakura.ne.jp/create-pw/",
+          title: "パスワード生成",
+          img: require("../assets/create-pw.png"),
+          date: "2020年5月5日"
+        },
+        {
+          id: 6,
+          url: "https://tkm99.sakura.ne.jp/dot-mario/",
+          title: "ドットマリオ",
+          img: require("../assets/dot-mario.png"),
+          date: "2020年5月5日"
+        },
+        {
+          id: 7,
+          url: "https://tkm99.sakura.ne.jp/shooting-game/",
+          title: "シューティングゲーム",
+          img: require("../assets/shooting.png"),
+          date: "2020年5月5日"
         }
       ]
-    }
+    };
   },
   mounted() {
-    const card = document.getElementsByClassName('works-list__item');
+    const card = document.getElementsByClassName("works-list__item");
     const options = {
-        root: null,
-        rootMargin: '-20px 0px -100px 0px'
+      root: null,
+      rootMargin: "-20px 0px -100px 0px"
     };
     card.forEach(target => this.onIntersect(target, options));
   },
   methods: {
-    onIntersect(target, options ={}) {
+    onIntersect(target, options = {}) {
       const io = new IntersectionObserver(this.addClass, options);
       io.observe(target);
     },
     addClass(entries) {
       entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          entry.target.classList.add('fadeup');
-        }else {
-          entry.target.classList.remove('fadeup');
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fadeup");
+        } else {
+          entry.target.classList.remove("fadeup");
         }
-      })
+      });
     }
   },
   components: {
     WorksCard
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -73,7 +102,8 @@ export default {
   position: relative;
   background-color: #000;
   &__ttl {
-    margin: 20px;
+    padding: 20px;
+    color: #fff;
     font-size: 32px;
   }
   &-list {
@@ -84,7 +114,8 @@ export default {
       margin: 50px 20px;
       transform: translateY(50px);
       opacity: 0;
-      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s, opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s;
+      transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s,
+        opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1) 0s;
       &.fadeup {
         transform: translateY(0);
         opacity: 1;
