@@ -28,7 +28,7 @@
           <span class="career__q-txt">保有資格</span>
         </div>
         <div class="career__a">
-          <p class="career__a-txt">普通自動車免許、漢字能力検定2級、ITパスポート、Webクリエイター能力認定試験エキスパート</p>
+          <p class="career__a-txt">普通自動車免許第１種、漢字能力検定2級、ITパスポート、Webクリエイター能力認定試験エキスパート</p>
         </div>
       </li>
       <li class="career-list__item">
@@ -38,7 +38,7 @@
         <div class="career__a">
           <p
             class="career__a-txt"
-          >HTML、CSS、Sass、JavaScript、jQuery、TypeScript、Vue.js、 Gulp、Webpack、Git</p>
+          >HTML、CSS、Sass、JavaScript、jQuery、TypeScript、Vue.js、 Gulp、Webpack、WordPress、Git</p>
         </div>
       </li>
     </ul>
@@ -63,6 +63,7 @@ export default {
 <style lang="scss" scoped>
 .career {
   position: relative;
+  padding: 30px 0;
   background-color: #fff;
   &__ttl {
     padding: 20px;
@@ -100,6 +101,7 @@ export default {
     background-color: #ff7f50;
     text-align: center;
     transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    cursor: pointer;
     &:hover {
       letter-spacing: 5px;
       opacity: 0.8;
@@ -153,7 +155,7 @@ export default {
     font-size: 18px;
     line-height: 0;
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.33, 1, 0.68, 1) 0s;
+    transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0s;
     &-txt {
       padding: 20px;
     }

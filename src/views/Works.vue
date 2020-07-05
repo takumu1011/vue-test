@@ -21,49 +21,49 @@ export default {
           url: "https://github.com/takumu1011/",
           title: "Git hub",
           img: require("../assets/github.png"),
-          date: "2020年2月2日"
+          date: "2020年6月20日"
         },
         {
           id: 2,
           url: "https://scrapbox.io/sumikawa-web/",
           title: "ScrapBox",
           img: require("../assets/scrapbox.png"),
-          date: "2020年2月2日"
+          date: "2020年6月20日"
         },
         {
           id: 3,
           url: "http://tkm99.sakura.ne.jp/veg_market/",
           title: "野菜直売所",
           img: require("../assets/veg-market.png"),
-          date: "2020年2月2日"
+          date: "2020年6月20日"
         },
         {
           id: 4,
           url: "https://tkm99.sakura.ne.jp/covid/",
           title: "コロナウイルス対策サイト",
           img: require("../assets/covid.png"),
-          date: "2020年10月11日"
+          date: "2020年6月20日"
         },
         {
           id: 5,
           url: "https://tkm99.sakura.ne.jp/create-pw/",
           title: "パスワード生成",
           img: require("../assets/create-pw.png"),
-          date: "2020年5月5日"
+          date: "2020年6月20日"
         },
         {
           id: 6,
           url: "https://tkm99.sakura.ne.jp/dot-mario/",
           title: "ドットマリオ",
           img: require("../assets/dot-mario.png"),
-          date: "2020年5月5日"
+          date: "2020年6月20日"
         },
         {
           id: 7,
           url: "https://tkm99.sakura.ne.jp/shooting-game/",
           title: "シューティングゲーム",
           img: require("../assets/shooting.png"),
-          date: "2020年5月5日"
+          date: "2020年6月20日"
         }
       ]
     };
@@ -100,11 +100,13 @@ export default {
 <style lang="scss" scoped>
 .works {
   position: relative;
+  padding: 30px 0;
   background-color: #000;
   &__ttl {
     padding: 20px;
     color: #fff;
     font-size: 32px;
+    letter-spacing: 5px;
   }
   &-list {
     display: flex;

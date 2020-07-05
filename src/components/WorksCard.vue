@@ -1,7 +1,9 @@
 <template>
   <div class="card">
     <a class="card__link" :href="card.url" target="_blank">
-      <img class="card__img" :src="card.img" />
+      <p class="card__img-wrap">
+        <img class="card__img" :src="card.img" />
+      </p>
       <div class="card__txt">
         <h3 class="card__ttl">
           <span class="card__ttl-in">{{ card.title }}</span>
@@ -43,6 +45,9 @@ export default {
   transition: box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0s;
   &:hover {
     box-shadow: 0 0 15px #222;
+    .card__img {
+      transform: scale(1);
+    }
     .card__ttl-in::before {
       animation: icon-move 0.75s linear 0s infinite;
     }
@@ -51,9 +56,17 @@ export default {
     color: #222;
     text-decoration: none;
   }
+  &__img-wrap {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
   &__img {
     display: block;
     width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    transition: transform 0.4s ease-out 0s;
   }
   &__txt {
     padding: 0 10px;
