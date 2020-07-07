@@ -97,6 +97,7 @@ export default {
 }
 .profile {
   position: relative;
+  height: 100vh;
   padding: 150px 0 60px;
   transition: background-color 0.8s ease-out 0s;
   &__in {

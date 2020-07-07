@@ -1,28 +1,16 @@
 <template>
-  <div class="home">
-    <div class="home__in">
-    <section class="home-github">
-    </section>
-    <section class="home-scrapbox">
-    </section>
-    </div>
-  </div>
+  <div class="home"></div>
 </template>
 
 
 <script>
 export default {
   data() {
-    return {
-
-    }
-  },
-}
+    return {};
+  }
+};
 </script>
 
 
 <style lang="scss" scoped>
-.home {
-
-}
 </style>

@@ -4,6 +4,7 @@
     <ul class="career-list">
       <li class="career-list__item">
         <div class="career__q">
+          <i class="fas fa-graduation-cap"></i>
           <span class="career__q-txt">最終学歴</span>
         </div>
         <div class="career__a">
@@ -17,6 +18,7 @@
       </li>
       <li class="career-list__item">
         <div class="career__q">
+          <i class="fas fa-business-time"></i>
           <span class="career__q-txt">アルバイト経験</span>
         </div>
         <div class="career__a">
@@ -25,6 +27,7 @@
       </li>
       <li class="career-list__item">
         <div class="career__q">
+          <i class="fas fa-id-badge"></i>
           <span class="career__q-txt">保有資格</span>
         </div>
         <div class="career__a">
@@ -33,6 +36,7 @@
       </li>
       <li class="career-list__item">
         <div class="career__q">
+          <i class="fas fa-laptop-code"></i>
           <span class="career__q-txt">スキルセット</span>
         </div>
         <div class="career__a">
@@ -48,11 +52,11 @@
 <script>
 export default {
   mounted() {
-    const items = document.querySelectorAll(".career-list__item");
+    const items = document.querySelectorAll(".career__q");
     items.forEach(
       function(item) {
         item.addEventListener("click", function() {
-          this.classList.toggle("is-open");
+          this.parentNode.classList.toggle("is-open");
         });
       }.bind(this)
     );
@@ -61,6 +65,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.fas {
+  position: relative;
+  margin-right: 10px;
+  padding-left: 30px;
+  font-size: 32px;
+  @media screen and (max-width: 650px) {
+    padding-left: 20px;
+    font-size: 24px;
+  }
+}
 .career {
   position: relative;
   padding: 30px 0;
@@ -96,10 +110,11 @@ export default {
   }
   &__q {
     position: relative;
+    z-index: 2;
     width: 100%;
     padding: 20px 0;
     background-color: #ff7f50;
-    text-align: center;
+    border-radius: 10px;
     transition: all 0.3s cubic-bezier(0.33, 1, 0.68, 1) 0s;
     cursor: pointer;
     &:hover {
@@ -142,12 +157,13 @@ export default {
       font-size: 24px;
       font-weight: bold;
       @media screen and (max-width: 650px) {
-        padding-left: 50px;
         font-size: 18px;
       }
     }
   }
   &__a {
+    position: relative;
+    top: -5px;
     transform-origin: top;
     transform: scaleY(0);
     width: 100%;
