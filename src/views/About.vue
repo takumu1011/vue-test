@@ -56,13 +56,25 @@
           <th class="about-table__th">
             <span class="about-table__th-txt">趣味</span>
           </th>
-          <td class="about-table__td">Web制作・書店に行くこと</td>
+          <td class="about-table__td">Web制作・書店に行くこと・アニメ</td>
         </tr>
         <tr class="about-table__tr">
           <th class="about-table__th">
             <span class="about-table__th-txt">好きなスポーツ</span>
           </th>
           <td class="about-table__td">サッカー</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
+            <span class="about-table__th-txt">好きな食べ物</span>
+          </th>
+          <td class="about-table__td">鮭、ピザ、枝豆</td>
+        </tr>
+        <tr class="about-table__tr">
+          <th class="about-table__th">
+            <span class="about-table__th-txt">好きな色</span>
+          </th>
+          <td class="about-table__td">緑</td>
         </tr>
         <tr class="about-table__tr">
           <th class="about-table__th">
@@ -98,7 +110,6 @@ export default {};
     left: 0;
     width: 100%;
     height: 100%;
-    // background: linear-gradient(15deg,#fff 50%, #222 50%);
     z-index: -1;
   }
   &__ttl {
